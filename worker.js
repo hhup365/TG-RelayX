@@ -132,7 +132,7 @@ async function d1DeleteExpiredMessages(env) {
     }
 }
 
-// ─── Compact user info card (Telegram native preview style) ───────
+// ─── Compact user info card ───────
 async function sendUserInfoCard(from, threadId, env) {
     const userId    = from.id;
     const firstName = (from.first_name || "").trim();
@@ -160,7 +160,7 @@ async function sendUserInfoCard(from, threadId, env) {
     });
 }
 
-// ─── Welcome message (/start only — no verification trigger) ──────
+// ─── Welcome message ──────
 async function sendWelcomeMessage(userId, env) {
     const bar = `✦  ·  ✦  ·  ✦  ·  ✦  ·  ✦  ·  ✦`;
     const text =
@@ -372,7 +372,7 @@ async function checkRateLimit(userId, env, action = 'message', limit = 20, windo
     return { allowed: true, remaining: limit - count - 1 };
 }
 
-// ─── Parse command (strips @botname suffix) ───────────────────────
+// ─── Parse command ───────────────────────
 function parseCommand(rawText) {
     if (!rawText) return null;
     const text = rawText.trim();
