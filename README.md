@@ -240,7 +240,7 @@ https://api.telegram.org/bot<YOUR_TOKEN>/deleteWebhook?drop_pending_updates=true
 
 ## 📌 Credits
 
-Based on:[https://github.com/jikssha/telegram_private_chatbot](https://github.com/jikssha/telegram_private_chatbot)
+Based on: [telegram_private_chatbot](https://github.com/jikssha/telegram_private_chatbot)
 
 Licensed under the MIT License.
 
